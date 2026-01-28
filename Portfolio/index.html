@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amani AlJarida | Creative Portfolio</title>
+    <style>
+        /* --- General Styles --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f0c29;
+            background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* --- Fixed Navbar --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #ff00cc; /* Background Color */
+            padding: 15px 0;
+            z-index: 1000;
+            text-align: center;
+        }
+        .navbar a {
+            color: white; /* Font Color */
+            text-decoration: none;
+            padding: 14px 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #333; /* Hover Effect */
+            color: #00d2ff;
+            border-radius: 5px;
+        }
+
+        /* --- Hero Video Section (Video with Text Overlay) --- */
+        .video-container {
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            filter: brightness(40%);
+        }
+        .video-overlay-text {
+            text-align: center;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 2px 2px 10px #ff00cc;
+        }
+
+        /* --- Main Content --- */
+        .container { padding: 100px 10% 50px; }
+
+        /* --- Centered, Filtered, Rounded Image --- */
+        .profile-box { text-align: center; margin-bottom: 50px; }
+        .profile-img {
+            width: 300px;
+            border-radius: 50px; /* Rounded Edges */
+            filter: sepia(50%) hue-rotate(290deg); /* CSS Filter */
+            border: 5px solid #00d2ff;
+            transition: 0.5s;
+        }
+
+        /* --- Text Hover Effect --- */
+        .hover-text {
+            font-size: 1.2rem;
+            transition: color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+        .hover-text:hover {
+            color: #ff00cc; /* Hover effect for <p> */
+            transform: scale(1.05);
+        }
+
+        /* --- Two Column Layout --- */
+        .row {
+            display: flex;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .column {
+            flex: 50%; /* Width of columns */
+            height: 300px; /* Height of columns */
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            color: #00d2ff; /* Font color inside columns */
+            border: 1px solid #ff00cc;
+        }
+
+        /* --- Image Overlay Fade --- */
+        .overlay-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+        }
+        .overlay-img { width: 100%; border-radius: 15px; display: block; }
+        .overlay-fade {
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+            height: 100%; width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #ff00cc;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .overlay-container:hover .overlay-fade { opacity: 0.9; }
+        .overlay-text { color: white; font-size: 20px; font-weight: bold; }
+
+        /* --- Styled Table --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 50px 0;
+            border: 3px solid #00d2ff; /* Table Border */
+        }
+        th, td {
+            padding: 15px; /* Cell Padding */
+            text-align: left;
+            border: 1px solid #444;
+        }
+        tr:first-child {
+            background-color: #ff00cc; /* Background color in top row */
+            color: white;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #111;
+            padding: 30px;
+            text-align: center; /* Centered */
+            font-weight: bold; /* Bold */
+            border-top: 3px solid #ff00cc;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+    </nav>
+
+    <div id="home" class="video-container">
+        <video autoplay muted loop>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay-text">
+            <h1>Amani AlJarida</h1>
+            <p style="font-size: 1.5rem;">Digital Creator & Student</p>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <div id="about" class="profile-box">
+            <img src="https://via.placeholder.com/300" alt="Amani" class="profile-img">
+            <p class="hover-text mt-3">Welcome to my colorful digital space! Hover over me to see the magic.</p>
+        </div>
+
+        <div class="overlay-container">
+            <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Work" class="overlay-img">
+            <div class="overlay-fade">
+                <div class="overlay-text">My Creative Work</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <h3>Technical Skills</h3>
+                <p>Specializing in Bootstrap 5, HTML5, and CSS3 layouts. Passionate about sleek user interfaces.</p>
+            </div>
+            <div class="column">
+                <h3>Design Philosophy</h3>
+                <p>I believe that code should be as colorful and expressive as the person writing it.</p>
+            </div>
+        </div>
+
+        <table id="projects">
+            <tr>
+                <th>Project Name</th>
+                <th>Year</th>
+                <th>Technology</th>
+            </tr>
+            <tr>
+                <td>Cinema Website</td>
+                <td>2026</td>
+                <td>Bootstrap 5</td>
+            </tr>
+            <tr>
+                <td>Personal Portfolio</td>
+                <td>2026</td>
+                <td>HTML / CSS</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <footer>
+        Designed by Amani AlJarida &copy; 2026. Built with Passion.
+    </footer>
+
+</body>
+</html>
